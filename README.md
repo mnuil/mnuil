@@ -44,13 +44,6 @@ Java와 Spring Boot를 기반으로 업무 시스템을 개발하고 있으며,
 
 <br />
 
-## 📌 Pinned
-
-<div align="center">
-[![hr](https://github-readme-stats.vercel.app/api/pin/?username=mnuil&repo=nr&theme=transparent&hide_border=true)](https://github.com/mnuil/hr)
-
-</div>
-
 ## 📊 GitHub Stats
 
 <div align="center">
