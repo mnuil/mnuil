@@ -1,14 +1,18 @@
-<div align="center">
-
 # Hi, I'm mnuil 👋
 
-**Backend Developer** · 꾸준히 배우고 기록하며 더 나은 코드를 만들어갑니다.
+백엔드 개발을 중심으로 안정적이고 유지보수하기 좋은 서비스를 만들어가고 있습니다.
+
+Java와 Spring Boot를 기반으로 업무 시스템을 개발하고 있으며,  
+기능 구현뿐만 아니라 기존 코드의 구조를 이해하고 개선하는 과정에도 관심이 많습니다.
+
+- 💻 **Backend Developer**
+- 🏢 인사·업무 관리 시스템 개발 및 개선
+- 🌱 새로운 기술을 꾸준히 배우고 기록합니다.
+- 🔍 읽기 쉽고 오래 유지할 수 있는 코드를 고민합니다.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](#)
 [![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=gmail&logoColor=white)](#)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/mnuil)
-
-</div>
 
 <br />
 
