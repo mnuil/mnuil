@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1142" height="743" viewBox="0 0 1142 743" role="img" aria-label="신청·승인·반려·완료">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+</marker>
+<style>.node{fill:#f8fafc;stroke:#475569;stroke-width:1.5}.decision{fill:#fffaf0;stroke:#9a6b36;stroke-width:1.5}.terminal{fill:#f3f7f5;stroke:#315a72;stroke-width:1.5}.label{font-family:'Malgun Gothic','Noto Sans KR',sans-serif;font-size:16px;fill:#1e293b}.edgeLabel{font-family:'Malgun Gothic','Noto Sans KR',sans-serif;font-size:14px;fill:#475569}.actor{fill:#f4f7f9;stroke:#315a72;stroke-width:1.5}.lane{stroke:#cbd5e1;stroke-width:1;stroke-dasharray:5 5}.edge{fill:none;stroke:#64748b;stroke-width:1.5;marker-end:url(#arrow)}</style>
+</defs>
+<path class="edge" d="M 238 70 L 312 70"/>
+<path class="edge" d="M 530 70 L 604 70"/>
+<path class="edge" d="M 822 70 L 896 70"/>
+<path class="edge" d="M 904 259 L 830 259"/>
+<path class="edge" d="M 612 259 L 538 259"/>
+<text x="571" y="232" text-anchor="middle" dominant-baseline="middle" class="edgeLabel">
+<tspan x="571" dy="0">반려</tspan>
+</text>
+<path class="edge" d="M 612 259 L 246 259"/>
+<text x="425" y="249" text-anchor="middle" dominant-baseline="middle" class="edgeLabel">
+<tspan x="425" dy="0">승인</tspan>
+</text>
+<path class="edge" d="M 238 259 L 896 259"/>
+<text x="571" y="280" text-anchor="middle" dominant-baseline="middle" class="edgeLabel">
+<tspan x="571" dy="0">있음</tspan>
+</text>
+<path class="edge" d="M 238 448 L 312 448"/>
+<path class="edge" d="M 530 448 L 604 448"/>
+<path class="edge" d="M 822 448 L 896 448"/>
+<text x="863" y="438" text-anchor="middle" dominant-baseline="middle" class="edgeLabel">
+<tspan x="863" dy="0">예</tspan>
+</text>
+<path class="edge" d="M 717 490 L 717 542.5 L 1009 542.5 L 1009 587"/>
+<text x="863" y="532.5" text-anchor="middle" dominant-baseline="middle" class="edgeLabel">
+<tspan x="863" dy="0">아니오</tspan>
+</text>
+<path class="edge" d="M 1009 112 L 1009 164.5 L 1009 164.5 L 1009 209"/>
+<path class="edge" d="M 133 301 L 133 353.5 L 133 353.5 L 133 398"/>
+<text x="133" y="343.5" text-anchor="middle" dominant-baseline="middle" class="edgeLabel">
+<tspan x="133" dy="0">없음</tspan>
+</text>
+<rect class="terminal" x="28" y="28" width="210" height="84" rx="12"/>
+<text x="133" y="70" text-anchor="middle" dominant-baseline="middle" class="label">
+<tspan x="133" dy="0">업무 신청</tspan>
+</text>
+<rect class="node" x="320" y="28" width="210" height="84" rx="12"/>
+<text x="425" y="70" text-anchor="middle" dominant-baseline="middle" class="label">
+<tspan x="425" dy="0">결재선 조회·생성</tspan>
+</text>
+<rect class="node" x="612" y="28" width="210" height="84" rx="12"/>
+<text x="717" y="70" text-anchor="middle" dominant-baseline="middle" class="label">
+<tspan x="717" dy="0">신청내용 검증</tspan>
+</text>
+<rect class="node" x="904" y="28" width="210" height="84" rx="12"/>
+<text x="1009" y="70" text-anchor="middle" dominant-baseline="middle" class="label">
+<tspan x="1009" dy="0">paprrequestins</tspan>
+</text>
+<rect class="node" x="904" y="217" width="210" height="84" rx="12"/>
+<text x="1009" y="259" text-anchor="middle" dominant-baseline="middle" class="label">
+<tspan x="1009" dy="0">현재 결재자 확인</tspan>
+</text>
+<polygon class="decision" points="717,217 822,259 717,301 612,259"/>
+<text x="717" y="259" text-anchor="middle" dominant-baseline="middle" class="label">
+<tspan x="717" dy="0">처리 결과?</tspan>
+</text>
+<rect class="node" x="320" y="217" width="210" height="84" rx="12"/>
+<text x="425" y="259" text-anchor="middle" dominant-baseline="middle" class="label">
+<tspan x="425" dy="0">신청자 반려 통보</tspan>
+</text>
+<polygon class="decision" points="133,217 238,259 133,301 28,259"/>
+<text x="133" y="259" text-anchor="middle" dominant-baseline="middle" class="label">
+<tspan x="133" dy="0">다음 결재자?</tspan>
+</text>
+<rect class="node" x="28" y="406" width="210" height="84" rx="12"/>
+<text x="133" y="448" text-anchor="middle" dominant-baseline="middle" class="label">
+<tspan x="133" dy="0">최종 승인 완료</tspan>
+</text>
+<rect class="node" x="320" y="406" width="210" height="84" rx="12"/>
+<text x="425" y="448" text-anchor="middle" dominant-baseline="middle" class="label">
+<tspan x="425" dy="0">원 업무 상태 반영</tspan>
+</text>
+<polygon class="decision" points="717,406 822,448 717,490 612,448"/>
+<text x="717" y="448" text-anchor="middle" dominant-baseline="middle" class="label">
+<tspan x="717" dy="0">완료 후 취소?</tspan>
+</text>
+<rect class="node" x="904" y="406" width="210" height="84" rx="12"/>
+<text x="1009" y="448" text-anchor="middle" dominant-baseline="middle" class="label">
+<tspan x="1009" dy="0">papragreecancel</tspan>
+</text>
+<rect class="terminal" x="904" y="595" width="210" height="84" rx="12"/>
+<text x="1009" y="637" text-anchor="middle" dominant-baseline="middle" class="label">
+<tspan x="1009" dy="0">처리 완료</tspan>
+</text>
+</svg>
+
