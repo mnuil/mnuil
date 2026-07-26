@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="650" viewBox="0 0 1400 650">
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker><style>.title{font:700 30px 'Malgun Gothic',sans-serif;fill:#172033}.box{fill:#fff;stroke:#64748b;stroke-width:2}.accent{fill:#eff6ff;stroke:#3b82f6;stroke-width:2}.head{font:700 20px 'Malgun Gothic',sans-serif;fill:#172033}.txt{font:16px 'Malgun Gothic',sans-serif;fill:#334155}.line{stroke:#475569;stroke-width:3;fill:none;marker-end:url(#arrow)}</style></defs>
+  <rect width="1400" height="650" fill="#fff"/><text x="700" y="52" text-anchor="middle" class="title">withHR 네트워크·배포 구성 예시</text>
+  <text x="60" y="105" class="head">서비스 요청 흐름</text>
+  <rect x="60" y="140" width="180" height="90" rx="14" class="box"/><text x="150" y="180" text-anchor="middle" class="head">사용자</text><text x="150" y="207" text-anchor="middle" class="txt">Web Browser</text>
+  <rect x="315" y="140" width="220" height="90" rx="14" class="box"/><text x="425" y="178" text-anchor="middle" class="head">방화벽 · ACG</text><text x="425" y="207" text-anchor="middle" class="txt">프로젝트 설정 확인</text>
+  <rect x="610" y="140" width="220" height="90" rx="14" class="accent"/><text x="720" y="178" text-anchor="middle" class="head">Tomcat WAS</text><text x="720" y="207" text-anchor="middle" class="txt">Spring Boot WAR</text>
+  <rect x="905" y="105" width="220" height="90" rx="14" class="box"/><text x="1015" y="143" text-anchor="middle" class="head">PostgreSQL</text><text x="1015" y="172" text-anchor="middle" class="txt">JDBC · 내부망</text>
+  <rect x="905" y="220" width="400" height="90" rx="14" class="box"/><text x="1105" y="258" text-anchor="middle" class="head">리포트 · 메일 · 외부기관</text><text x="1105" y="287" text-anchor="middle" class="txt">HTTPS · SMTP · FTP</text>
+  <path d="M240 185 L315 185" class="line"/><text x="277" y="170" text-anchor="middle" class="txt">HTTPS</text><path d="M535 185 L610 185" class="line"/><path d="M830 175 L905 155" class="line"/><path d="M830 200 L905 260" class="line"/>
+  <text x="60" y="385" class="head">빌드·배포 흐름</text>
+  <rect x="60" y="420" width="180" height="90" rx="14" class="box"/><text x="150" y="460" text-anchor="middle" class="head">개발자</text><text x="150" y="489" text-anchor="middle" class="txt">소스 변경</text>
+  <rect x="315" y="420" width="180" height="90" rx="14" class="box"/><text x="405" y="460" text-anchor="middle" class="head">GitHub</text><text x="405" y="489" text-anchor="middle" class="txt">형상관리</text>
+  <rect x="570" y="420" width="200" height="90" rx="14" class="box"/><text x="670" y="460" text-anchor="middle" class="head">Jenkins</text><text x="670" y="489" text-anchor="middle" class="txt">Maven 빌드</text>
+  <rect x="845" y="420" width="200" height="90" rx="14" class="accent"/><text x="945" y="460" text-anchor="middle" class="head">withHR.war</text><text x="945" y="489" text-anchor="middle" class="txt">전체 배포 단위</text>
+  <rect x="1120" y="420" width="220" height="90" rx="14" class="box"/><text x="1230" y="460" text-anchor="middle" class="head">Tomcat WAS</text><text x="1230" y="489" text-anchor="middle" class="txt">배포 · 기동 확인</text>
+  <path d="M240 465 L315 465" class="line"/><path d="M495 465 L570 465" class="line"/><path d="M770 465 L845 465" class="line"/><path d="M1045 465 L1120 465" class="line"/>
+  <text x="700" y="590" text-anchor="middle" class="txt">서버 수 · 방화벽 · Jenkins Job · 외부 연계 주소는 프로젝트 확정 구성에 맞춰 갱신</text>
+</svg>
