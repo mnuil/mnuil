@@ -1,0 +1,230 @@
+{
+  "generatedAt": "2026-07-27T01:39:20.191Z",
+  "source": "mnuil/hr A-HR/ddl",
+  "items": [
+    {
+      "module": "tapr",
+      "index": 1,
+      "name": "tapr-01",
+      "entities": 14,
+      "relations": 14
+    },
+    {
+      "module": "tcfg",
+      "index": 1,
+      "name": "tcfg-01",
+      "entities": 10,
+      "relations": 12
+    },
+    {
+      "module": "tcfg",
+      "index": 2,
+      "name": "tcfg-02",
+      "entities": 8,
+      "relations": 6
+    },
+    {
+      "module": "tcfg",
+      "index": 3,
+      "name": "tcfg-03",
+      "entities": 12,
+      "relations": 3
+    },
+    {
+      "module": "tdpt",
+      "index": 1,
+      "name": "tdpt-01",
+      "entities": 7,
+      "relations": 7
+    },
+    {
+      "module": "tdpt",
+      "index": 2,
+      "name": "tdpt-02",
+      "entities": 11,
+      "relations": 7
+    },
+    {
+      "module": "thrs",
+      "index": 1,
+      "name": "thrs-01",
+      "entities": 10,
+      "relations": 11
+    },
+    {
+      "module": "thrs",
+      "index": 2,
+      "name": "thrs-02",
+      "entities": 9,
+      "relations": 8
+    },
+    {
+      "module": "thrs",
+      "index": 3,
+      "name": "thrs-03",
+      "entities": 6,
+      "relations": 5
+    },
+    {
+      "module": "thrs",
+      "index": 4,
+      "name": "thrs-04",
+      "entities": 12,
+      "relations": 24
+    },
+    {
+      "module": "thrs",
+      "index": 5,
+      "name": "thrs-05",
+      "entities": 9,
+      "relations": 6
+    },
+    {
+      "module": "thrs",
+      "index": 6,
+      "name": "thrs-06",
+      "entities": 5,
+      "relations": 5
+    },
+    {
+      "module": "tpay",
+      "index": 1,
+      "name": "tpay-01",
+      "entities": 8,
+      "relations": 13
+    },
+    {
+      "module": "tpay",
+      "index": 2,
+      "name": "tpay-02",
+      "entities": 7,
+      "relations": 8
+    },
+    {
+      "module": "tpay",
+      "index": 3,
+      "name": "tpay-03",
+      "entities": 5,
+      "relations": 0
+    },
+    {
+      "module": "tpay",
+      "index": 4,
+      "name": "tpay-04",
+      "entities": 7,
+      "relations": 6
+    },
+    {
+      "module": "tpay",
+      "index": 5,
+      "name": "tpay-05",
+      "entities": 14,
+      "relations": 26
+    },
+    {
+      "module": "tpay",
+      "index": 6,
+      "name": "tpay-06",
+      "entities": 5,
+      "relations": 3
+    },
+    {
+      "module": "tpay",
+      "index": 7,
+      "name": "tpay-07",
+      "entities": 3,
+      "relations": 2
+    },
+    {
+      "module": "tpay",
+      "index": 8,
+      "name": "tpay-08",
+      "entities": 4,
+      "relations": 3
+    },
+    {
+      "module": "tpay",
+      "index": 9,
+      "name": "tpay-09",
+      "entities": 2,
+      "relations": 0
+    },
+    {
+      "module": "tpcp",
+      "index": 1,
+      "name": "tpcp-01",
+      "entities": 9,
+      "relations": 7
+    },
+    {
+      "module": "tpcp",
+      "index": 2,
+      "name": "tpcp-02",
+      "entities": 7,
+      "relations": 9
+    },
+    {
+      "module": "tpcp",
+      "index": 3,
+      "name": "tpcp-03",
+      "entities": 4,
+      "relations": 2
+    },
+    {
+      "module": "tsec",
+      "index": 1,
+      "name": "tsec-01",
+      "entities": 5,
+      "relations": 0
+    },
+    {
+      "module": "ttat",
+      "index": 1,
+      "name": "ttat-01",
+      "entities": 8,
+      "relations": 9
+    },
+    {
+      "module": "ttat",
+      "index": 2,
+      "name": "ttat-02",
+      "entities": 12,
+      "relations": 10
+    },
+    {
+      "module": "ttat",
+      "index": 3,
+      "name": "ttat-03",
+      "entities": 2,
+      "relations": 1
+    },
+    {
+      "module": "ttat",
+      "index": 4,
+      "name": "ttat-04",
+      "entities": 6,
+      "relations": 3
+    },
+    {
+      "module": "ttat",
+      "index": 5,
+      "name": "ttat-05",
+      "entities": 5,
+      "relations": 3
+    },
+    {
+      "module": "ttat",
+      "index": 6,
+      "name": "ttat-06",
+      "entities": 5,
+      "relations": 7
+    },
+    {
+      "module": "twbf",
+      "index": 1,
+      "name": "twbf-01",
+      "entities": 7,
+      "relations": 6
+    }
+  ]
+}
