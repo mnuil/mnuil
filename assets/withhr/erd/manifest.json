@@ -1,6 +1,7 @@
 {
-  "generatedAt": "2026-07-27T01:39:20.191Z",
+  "generatedAt": "2026-08-07T04:31:25.267Z",
   "source": "mnuil/hr A-HR/ddl",
+  "columnsPerRow": 3,
   "items": [
     {
       "module": "tapr",
@@ -20,8 +21,8 @@
       "module": "tcfg",
       "index": 2,
       "name": "tcfg-02",
-      "entities": 8,
-      "relations": 6
+      "entities": 9,
+      "relations": 7
     },
     {
       "module": "tcfg",
@@ -104,48 +105,69 @@
       "module": "tpay",
       "index": 3,
       "name": "tpay-03",
-      "entities": 5,
+      "entities": 3,
       "relations": 0
     },
     {
       "module": "tpay",
       "index": 4,
       "name": "tpay-04",
-      "entities": 7,
-      "relations": 6
+      "entities": 2,
+      "relations": 0
     },
     {
       "module": "tpay",
       "index": 5,
       "name": "tpay-05",
-      "entities": 14,
-      "relations": 26
+      "entities": 4,
+      "relations": 1
     },
     {
       "module": "tpay",
       "index": 6,
       "name": "tpay-06",
-      "entities": 5,
-      "relations": 3
-    },
-    {
-      "module": "tpay",
-      "index": 7,
-      "name": "tpay-07",
       "entities": 3,
       "relations": 2
     },
     {
       "module": "tpay",
+      "index": 7,
+      "name": "tpay-07",
+      "entities": 14,
+      "relations": 26
+    },
+    {
+      "module": "tpay",
       "index": 8,
       "name": "tpay-08",
-      "entities": 4,
+      "entities": 5,
       "relations": 3
     },
     {
       "module": "tpay",
       "index": 9,
       "name": "tpay-09",
+      "entities": 3,
+      "relations": 2
+    },
+    {
+      "module": "tpay",
+      "index": 10,
+      "name": "tpay-10",
+      "entities": 3,
+      "relations": 2
+    },
+    {
+      "module": "tpay",
+      "index": 11,
+      "name": "tpay-11",
+      "entities": 4,
+      "relations": 3
+    },
+    {
+      "module": "tpay",
+      "index": 12,
+      "name": "tpay-12",
       "entities": 2,
       "relations": 0
     },
