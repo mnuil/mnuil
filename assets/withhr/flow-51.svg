@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="300" viewBox="0 0 1280 300" role="img" aria-labelledby="title desc">
+  <title id="title">변경 요청 결정 흐름</title>
+  <desc id="desc">요청 접수부터 영향 분석, 내부 결정, 현업 회신, 구현과 기록까지의 흐름</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker></defs>
+  <rect width="1280" height="300" rx="12" fill="#f8fafc"/>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif" text-anchor="middle">
+    <text x="40" y="38" text-anchor="start" font-size="20" font-weight="700" fill="#0f172a">변경 요청 결정</text>
+    <g font-size="16" font-weight="700">
+      <g transform="translate(40 88)"><rect width="180" height="76" rx="8" fill="#fff" stroke="#93c5fd"/><text x="90" y="34" fill="#1e3a8a">요청 접수</text><text x="90" y="57" font-size="13" font-weight="400" fill="#475569">목적 · 대상 · 시점</text></g>
+      <g transform="translate(270 88)"><rect width="210" height="76" rx="8" fill="#fff" stroke="#93c5fd"/><text x="105" y="34" fill="#1e3a8a">공통 영향 분석</text><text x="105" y="57" font-size="13" font-weight="400" fill="#475569">소스 · DB · 권한 · 연계</text></g>
+      <g transform="translate(530 76)"><path d="M105 0L210 50L105 100L0 50Z" fill="#fff7ed" stroke="#fb923c"/><text x="105" y="45" fill="#9a3412">적용 방식</text><text x="105" y="67" font-size="13" font-weight="400" fill="#7c2d12">공통 / 고객사 / 별도 / 미적용</text></g>
+      <g transform="translate(790 88)"><rect width="190" height="76" rx="8" fill="#fff" stroke="#93c5fd"/><text x="95" y="34" fill="#1e3a8a">현업 회신</text><text x="95" y="57" font-size="13" font-weight="400" fill="#475569">범위 · 일정 · 검증</text></g>
+      <g transform="translate(1030 88)"><rect width="210" height="76" rx="8" fill="#f0fdf4" stroke="#86efac"/><text x="105" y="34" fill="#166534">구현·테스트·기록</text><text x="105" y="57" font-size="13" font-weight="400" fill="#475569">결정 근거와 결과 보존</text></g>
+    </g>
+    <g stroke="#64748b" stroke-width="2" marker-end="url(#a)"><path d="M225 126H260"/><path d="M485 126H520"/><path d="M750 126H780"/><path d="M985 126H1020"/></g>
+    <rect x="270" y="220" width="710" height="44" rx="6" fill="#fff" stroke="#cbd5e1"/>
+    <text x="625" y="247" font-size="14" fill="#475569">개발자가 단독 확정하지 않음 · 비밀값은 기록하지 않음 · 추적 가능한 근거를 남김</text>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="210" viewBox="0 0 1280 210" role="img" aria-labelledby="title desc">
+  <title id="title">신규 개발자 빠른 시작 흐름</title>
+  <desc id="desc">도구 확인, 설정 확인, 기준 빌드, 기능 추적, 구현과 검증의 순서</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity=".12"/></filter>
+  </defs>
+  <rect width="1280" height="210" rx="12" fill="#f8fafc"/>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif" text-anchor="middle">
+    <text x="40" y="36" text-anchor="start" font-size="20" font-weight="700" fill="#0f172a">빠른 시작</text>
+    <g filter="url(#shadow)">
+      <g transform="translate(40 66)"><rect width="200" height="100" rx="8" fill="#fff" stroke="#93c5fd"/><circle cx="30" cy="28" r="16" fill="#2563eb"/><text x="30" y="34" font-size="16" font-weight="700" fill="#fff">1</text><text x="100" y="35" font-size="17" font-weight="700" fill="#1e3a8a">도구 확인</text><text x="100" y="66" font-size="14" fill="#475569">Git · Java 8 · Maven</text></g>
+      <g transform="translate(290 66)"><rect width="200" height="100" rx="8" fill="#fff" stroke="#93c5fd"/><circle cx="30" cy="28" r="16" fill="#2563eb"/><text x="30" y="34" font-size="16" font-weight="700" fill="#fff">2</text><text x="100" y="35" font-size="17" font-weight="700" fill="#1e3a8a">설정 확인</text><text x="100" y="66" font-size="14" fill="#475569">프로파일 · DB · 저장소</text></g>
+      <g transform="translate(540 66)"><rect width="200" height="100" rx="8" fill="#fff" stroke="#93c5fd"/><circle cx="30" cy="28" r="16" fill="#2563eb"/><text x="30" y="34" font-size="16" font-weight="700" fill="#fff">3</text><text x="100" y="35" font-size="17" font-weight="700" fill="#1e3a8a">기준 빌드</text><text x="100" y="66" font-size="14" fill="#475569">test · package · WAR</text></g>
+      <g transform="translate(790 66)"><rect width="200" height="100" rx="8" fill="#fff" stroke="#93c5fd"/><circle cx="30" cy="28" r="16" fill="#2563eb"/><text x="30" y="34" font-size="16" font-weight="700" fill="#fff">4</text><text x="100" y="35" font-size="17" font-weight="700" fill="#1e3a8a">기능 추적</text><text x="100" y="62" font-size="13" fill="#475569">Controller → Service</text><text x="100" y="82" font-size="13" fill="#475569">Mapper → 화면</text></g>
+      <g transform="translate(1040 66)"><rect width="200" height="100" rx="8" fill="#fff" stroke="#86efac"/><circle cx="30" cy="28" r="16" fill="#16a34a"/><text x="30" y="34" font-size="16" font-weight="700" fill="#fff">5</text><text x="100" y="35" font-size="17" font-weight="700" fill="#166534">구현·검증</text><text x="100" y="66" font-size="14" fill="#475569">2장 · 8장 · 12장</text></g>
+    </g>
+    <g stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"><path d="M245 116H280"/><path d="M495 116H530"/><path d="M745 116H780"/><path d="M995 116H1030"/></g>
+  </g>
+</svg>
