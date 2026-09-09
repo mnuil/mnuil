@@ -1,7 +1,14 @@
 %%{init: {"theme":"base","fontFamily":"Malgun Gothic, sans-serif","themeVariables":{"fontFamily":"Malgun Gothic, sans-serif","fontSize":"16px","primaryColor":"#eef4fc","primaryTextColor":"#18324f","primaryBorderColor":"#6284aa","lineColor":"#526779","actorBkg":"#eef4fc","actorBorder":"#6284aa"},"flowchart":{"htmlLabels":true,"nodeSpacing":24,"rankSpacing":28,"padding":16},"sequence":{"actorMargin":35,"messageMargin":24,"noteMargin":12,"mirrorActors":false,"useMaxWidth":true}}}%%
-flowchart LR
+flowchart TB
+    subgraph REQUEST["요청: 검색조건"]
+    direction LR
     A["검색폼 name<br/>searchEmpNo"] --> B["요청 Map 키<br/>searchEmpNo"]
     B --> C["SQL 바인딩<br/>검색조건"]
-    C --> D["SQL 결과<br/>emp_no"]
+    end
+    subgraph RESPONSE["응답: 조회 결과 행"]
+    direction LR
+    D["SQL 결과<br/>emp_no"]
     D --> E["cMap 변환<br/>empNo"]
     E --> F["IBSheet SaveName<br/>empNo"]
+    end
+    REQUEST --> RESPONSE
