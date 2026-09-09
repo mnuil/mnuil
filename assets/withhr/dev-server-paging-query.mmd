@@ -1,0 +1,7 @@
+%%{init: {"theme":"base","fontFamily":"Malgun Gothic, sans-serif","themeVariables":{"fontFamily":"Malgun Gothic, sans-serif","fontSize":"16px","primaryColor":"#eef4fc","primaryTextColor":"#18324f","primaryBorderColor":"#6284aa","lineColor":"#526779","actorBkg":"#eef4fc","actorBorder":"#6284aa"},"flowchart":{"htmlLabels":true,"nodeSpacing":24,"rankSpacing":28,"padding":16},"sequence":{"actorMargin":35,"messageMargin":24,"noteMargin":12,"mirrorActors":false,"useMaxWidth":true}}}%%
+flowchart LR
+    A["동일한 조건<br/>FROM · JOIN · WHERE"] --> B["전체건수<br/>COUNT → Total"]
+    A --> C["고유 정렬<br/>ROW_NUMBER"]
+    C --> D["페이지 선택<br/>표시 함수 · 복호화"]
+    B --> E["DATA + Total<br/>그리드 응답"]
+    D --> E

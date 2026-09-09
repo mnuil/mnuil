@@ -1,0 +1,5 @@
+%%{init: {"theme":"base","fontFamily":"Malgun Gothic, sans-serif","themeVariables":{"fontFamily":"Malgun Gothic, sans-serif","fontSize":"16px","primaryColor":"#eef4fc","primaryTextColor":"#18324f","primaryBorderColor":"#6284aa","lineColor":"#526779","actorBkg":"#eef4fc","actorBorder":"#6284aa"},"flowchart":{"htmlLabels":true,"nodeSpacing":24,"rankSpacing":28,"padding":16},"sequence":{"actorMargin":35,"messageMargin":24,"noteMargin":12,"mirrorActors":false,"useMaxWidth":true}}}%%
+flowchart LR
+    A["인계 자료 확인<br/>소스 · DB · 설정"] --> B["개발환경 재현<br/>빌드 · 로그인 · 조회"]
+    B --> C["기능 계약 작성<br/>입출력 · 권한 · 키"]
+    C --> D["기준 기능 추적<br/>화면 → 서버 → SQL"]

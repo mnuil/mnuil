@@ -1,0 +1,25 @@
+%%{init: {"theme":"base","fontFamily":"Malgun Gothic, sans-serif","themeVariables":{"fontFamily":"Malgun Gothic, sans-serif","fontSize":"16px","primaryColor":"#eef4fc","primaryTextColor":"#18324f","primaryBorderColor":"#6284aa","lineColor":"#526779","actorBkg":"#eef4fc","actorBorder":"#6284aa"},"flowchart":{"htmlLabels":true,"nodeSpacing":24,"rankSpacing":28,"padding":16},"sequence":{"actorMargin":35,"messageMargin":24,"noteMargin":12,"mirrorActors":false,"useMaxWidth":true}}}%%
+sequenceDiagram
+    participant U as IBSheet
+    participant C as Controller
+    participant S as Service 프록시
+    participant D as Dao / DB
+    U->>C: DoSave (s_SAVENAME + 행 상태 + 값)
+    C->>C: ParamUtils 파싱 · 세션값 설정
+    C->>S: 저장 호출
+    Note over S,D: REQUIRED 트랜잭션 · 동일 DB 작업 범위
+    S->>S: 행별 권한 · 필수값 · 현재 상태 검증
+    S->>D: 삭제 / 저장 (빈 목록 호출 생략)
+    alt 모든 DB 작업 성공
+        D-->>S: 변경 결과
+        S->>D: 커밋
+        S-->>C: 정상 반환
+        C-->>U: Result.Code / Result.Message
+        U->>U: 성공 코드 확인 후 재조회
+    else 예외가 Service 밖으로 전파
+        D-->>S: 예외
+        S->>D: 롤백
+        S-->>C: 예외 전달
+        C-->>U: 실패 응답
+    end
+    Note over U,D: 물리 파일 · 메일 · 별도 HTTP 요청은 이 DB 롤백에 포함되지 않음

@@ -1,0 +1,25 @@
+%%{init: {"theme":"base","fontFamily":"Malgun Gothic, sans-serif","themeVariables":{"fontFamily":"Malgun Gothic, sans-serif","fontSize":"16px","primaryColor":"#eef4fc","primaryTextColor":"#18324f","primaryBorderColor":"#6284aa","lineColor":"#526779","actorBkg":"#eef4fc","actorBorder":"#6284aa"},"flowchart":{"htmlLabels":true,"nodeSpacing":24,"rankSpacing":28,"padding":16},"sequence":{"actorMargin":35,"messageMargin":24,"noteMargin":12,"mirrorActors":false,"useMaxWidth":true}}}%%
+sequenceDiagram
+    participant U as 화면 / 헬퍼
+    participant C as Controller / Service
+    participant D as DB
+    participant S as 세션
+    U->>C: POST 준비 (조회조건 + dlToken)
+    C->>D: getListAll 전체조회
+    D-->>C: 표시값 포함 전체 결과
+    C->>S: 화면별 키 + dlToken으로 저장
+    C-->>U: 준비 결과 (Message)
+    alt 준비 성공
+        U->>C: POST 다운로드 (같은 dlToken)
+        C->>S: 준비 결과 조회
+        alt 결과 있음
+            S-->>C: 전체 결과
+            C->>S: 해당 키 제거
+        else 결과 없음
+            C->>D: 전체 재조회 (기준 구현)
+            D-->>C: 전체 결과
+        end
+        C-->>U: DirectDown2Excel 파일 응답
+    else 준비 실패
+        U->>U: 오류 표시 · 다운로드 중단
+    end
