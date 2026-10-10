@@ -1,0 +1,10 @@
+%%{init: {"theme":"base","fontFamily":"Malgun Gothic, sans-serif","themeVariables":{"fontFamily":"Malgun Gothic, sans-serif","fontSize":"16px","primaryColor":"#eef4fc","primaryTextColor":"#18324f","primaryBorderColor":"#6284aa","lineColor":"#526779","actorBkg":"#eef4fc","actorBorder":"#6284aa"},"flowchart":{"htmlLabels":true,"nodeSpacing":24,"rankSpacing":28,"padding":16},"sequence":{"actorMargin":35,"messageMargin":24,"noteMargin":12,"mirrorActors":false,"useMaxWidth":true}}}%%
+flowchart LR
+ A["PC 진입 요청"] --> B{"화면 쿠키?"}
+ B -->|pc| P["PC 선택"]
+ B -->|mobile| M["모바일 선택"]
+ B -->|없음| C{"호스트·휴대폰<br/>모바일?"}
+ C -->|예| M
+ C -->|아니오| D{"모바일 세션?"}
+ D -->|예| M
+ D -->|아니오| P

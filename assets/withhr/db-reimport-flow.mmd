@@ -1,0 +1,7 @@
+%%{init: {"theme":"base","fontFamily":"Malgun Gothic, sans-serif","themeVariables":{"fontFamily":"Malgun Gothic, sans-serif","fontSize":"16px","primaryColor":"#eef4fc","primaryTextColor":"#18324f","primaryBorderColor":"#6284aa","lineColor":"#526779","actorBkg":"#eef4fc","actorBorder":"#6284aa"},"flowchart":{"htmlLabels":true,"nodeSpacing":24,"rankSpacing":28,"padding":16},"sequence":{"actorMargin":35,"messageMargin":24,"noteMargin":12,"mirrorActors":false,"useMaxWidth":true}}}%%
+flowchart LR
+ A{"정식 오픈 전?"} -->|예| B["check<br/>스키마 · 확장 · 크기"] --> C["backup<br/>운영 전체 백업"] --> D["dump<br/>dev 스키마 · CR 제거"]
+ D --> E["sessions<br/>운영 연결 확인"] --> F["restore<br/>스키마 · pgcrypto 준비"] --> G{"verify<br/>건수 · 확장 · 로그인"}
+ G -->|정상| H["Tomcat 재시작<br/>화면 확인"]
+ G -->|실패| I["운영 백업 복원<br/>재검증 · 재시작"]
+ A -->|아니오| J["재이관 중단<br/>변경 이력 관리"]
