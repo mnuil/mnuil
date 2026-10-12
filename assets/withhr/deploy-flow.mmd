@@ -1,6 +1,12 @@
 %%{init: {"theme":"base","fontFamily":"Malgun Gothic, sans-serif","themeVariables":{"fontFamily":"Malgun Gothic, sans-serif","fontSize":"16px","primaryColor":"#eef4fc","primaryTextColor":"#18324f","primaryBorderColor":"#6284aa","lineColor":"#526779","actorBkg":"#eef4fc","actorBorder":"#6284aa"},"flowchart":{"htmlLabels":true,"nodeSpacing":24,"rankSpacing":28,"padding":16},"sequence":{"actorMargin":35,"messageMargin":24,"noteMargin":12,"mirrorActors":false,"useMaxWidth":true}}}%%
-flowchart LR
- A["develop 검증"] --> B["master 병합"] --> C["환경 확인<br/>수동 빌드"] --> D["Java 21 · Jenkins POM<br/>WAR 생성"]
- D --> E["Tomcat 중지<br/>기존 WAR 백업"] --> F["ROOT 교체<br/>Tomcat 시작"] --> G{"로그인·RD<br/>정상?"}
- G -->|예| H["배포 완료"]
- G -->|아니오| I["이전 Tomcat · JDK · WAR 복원"]
+flowchart TB
+ subgraph PREP["빌드 · 배포"]
+ direction LR
+ A["develop 검증"] --> B["master 병합"] --> C["Jenkins<br/>수동 빌드"] --> D["Java 21 · POM<br/>WAR 생성"] --> E["Tomcat 중지<br/>기존 WAR 백업"] --> F["ROOT 교체<br/>Tomcat 시작"]
+ end
+ subgraph CHECK["검증 · 완료 또는 복구"]
+ direction LR
+ G{"로그인·RD<br/>정상?"} -->|예| H["배포 완료"]
+ G -->|아니오| I["이전 Tomcat<br/>JDK·WAR 복원"]
+ end
+ PREP --> CHECK

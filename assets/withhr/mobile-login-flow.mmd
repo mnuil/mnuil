@@ -1,8 +1,12 @@
 %%{init: {"theme":"base","fontFamily":"Malgun Gothic, sans-serif","themeVariables":{"fontFamily":"Malgun Gothic, sans-serif","fontSize":"16px","primaryColor":"#eef4fc","primaryTextColor":"#18324f","primaryBorderColor":"#6284aa","lineColor":"#526779","actorBkg":"#eef4fc","actorBorder":"#6284aa"},"flowchart":{"htmlLabels":true,"nodeSpacing":24,"rankSpacing":28,"padding":16},"sequence":{"actorMargin":35,"messageMargin":24,"noteMargin":12,"mirrorActors":false,"useMaxWidth":true}}}%%
-flowchart LR
- A["모바일 진입 /m"] --> B["휴대폰만<br/>mobile 쿠키 저장"] --> C["모바일 세션 설정"] --> D{"로그인 세션?"}
- D -->|없음| E["모바일 로그인"]
- D -->|있음| F["모바일 메인"]
- F -->|PC 선택| G["/m/pc<br/>pc 쿠키 저장<br/>모바일 세션 해제"] --> H{"로그인 세션?"}
- H -->|있음| I["PC 메인"]
- H -->|없음| J["PC 로그인"]
+flowchart TB
+ subgraph AUTH["1. 로그인 세션이 없을 때"]
+ direction LR
+ A["/m 로그인 화면"] --> B["/getRsaKey<br/>입력값 RSA 암호화"] --> C["/loginUserCheck<br/>user_url=/m"]
+ end
+ subgraph SESSION["2. 인증 성공 후"]
+ direction LR
+ D["/loginUser<br/>로그인 세션 확정"] --> E["모바일 그룹 선택<br/>조회 사번 갱신"] --> F["임시 세션 제거<br/>/m 메인 이동"]
+ end
+ AUTH -->|성공| SESSION
+ AUTH -->|실패| X["오류 표시<br/>입력 재확인"]

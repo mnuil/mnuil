@@ -1,6 +1,12 @@
 %%{init: {"theme":"base","fontFamily":"Malgun Gothic, sans-serif","themeVariables":{"fontFamily":"Malgun Gothic, sans-serif","fontSize":"16px","primaryColor":"#eef4fc","primaryTextColor":"#18324f","primaryBorderColor":"#6284aa","lineColor":"#526779","actorBkg":"#eef4fc","actorBorder":"#6284aa"},"flowchart":{"htmlLabels":true,"nodeSpacing":24,"rankSpacing":28,"padding":16},"sequence":{"actorMargin":35,"messageMargin":24,"noteMargin":12,"mirrorActors":false,"useMaxWidth":true}}}%%
-flowchart LR
- A["설정·인증<br/>라이선스 보관"] --> B["jakarta RD WAR<br/>PostgreSQL JAR 확인"] --> C["RD 두 앱<br/>재배포"]
- C --> D["설정·라이선스<br/>복원"] --> E["DB 접속 확인"] --> F{"기동 · RD 출력<br/>정상?"}
- F -->|예| G["재배포 완료"]
+flowchart TB
+ subgraph PREP["재배포 · 설정 복원"]
+ direction LR
+ A["설정·인증<br/>라이선스 보관"] --> B["jakarta RD WAR<br/>PostgreSQL JAR"] --> C["RD 두 앱<br/>재배포"] --> D["설정·라이선스<br/>복원"] --> E["DB 접속 확인"]
+ end
+ subgraph CHECK["검증 · 완료 또는 점검"]
+ direction LR
+ F{"기동·RD 출력<br/>정상?"} -->|예| G["재배포 완료"]
  F -->|아니오| H["로그·WAR 확인<br/>설정 비교"]
+ end
+ PREP --> CHECK
